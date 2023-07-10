@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
-    "./Todo-list-app/src/App.vue"
+    "./index.html",
+    "./src/**/*.vue",
+    "./src/components/TodoComponent.vue",
   ],
   theme: {
     extend: {},

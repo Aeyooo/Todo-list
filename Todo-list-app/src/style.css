@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-color {
+        @apply md:container md:mx-auto h-screen grid place-items-center;
+
+    }
+
+    .bg-color-dark {
+        @apply bg-indigo-950
+    }
+
+    .bg-color-light {
+        @apply bg-indigo-50
+    }
+}

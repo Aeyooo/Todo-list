@@ -1,53 +1,29 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="md:container md:mx-auto h-screen grid grid-rows-2 " :class="darkmode ? 'bg-indigo-950' : 'bg-indigo-50'">
+    <div class=" h-full w-full">
+      <!-- <img :src="darkmode ? './assets/images/bg-desktop-dark.jpg' : './assets/images/bg-desktop-light.jpg'" /> -->
+      <img v-if="darkmode" src='./assets/images/bg-desktop-dark.jpg'/>
+      <img v-else-if="lightmode" src='./assets/images/bg-desktop-light.jpg'/>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
-  <div class="text"></div>
-  <div class="bg-43"></div>
+    <TodoComponent class="md:absolute w-2/5 h-1/2 grid grid-rows-[4rem,.16fr] border-red-600 place-self-center top-24"/>
+  </div>
 </template>
 
-<style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<script setup>
+import TodoComponent from './components/TodoComponent.vue'
+import { useCounterStore } from './stores/counter.js'
+import {ref} from 'vue'
+import { storeToRefs } from 'pinia'
 
-header {
-  line-height: 1.5;
+const hi = useCounterStore()
+const { darkmode, doubleCount, lightmode } = storeToRefs(hi)
+const data = {
+  component: { TodoComponent }
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+</script>
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+<style lang="scss" scoped>
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+</style> 
