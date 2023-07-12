@@ -1,0 +1,20 @@
+.light-theme{
+    background-color: #fafafa;
+    background-color: hsl(236, 33%, 92%);
+    background-color: hsl(233, 11%, 84%);
+    background-color: #9394a5;
+    background-color: hsl(235, 19%, 35%);
+}
+
+.dark-mode{
+    background-color: #161722;
+    background-color: #25273c;
+    background-color: #cacde8;
+    background-color: hsl(236, 33%, 92%) hover;
+    background-color: hsl(233, 11%, 52%);
+    background-color: #4d5066;
+    background-color: #393a4c;
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%)) check;
+    background-color: #3a7bfd;
+
+}

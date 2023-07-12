@@ -5,6 +5,7 @@ module.exports = {
     "./index.html",
     "./src/**/*.vue",
     "./src/components/TodoComponent.vue",
+    "./src/components/TodoList.vue",
   ],
   theme: {
     extend: {},
