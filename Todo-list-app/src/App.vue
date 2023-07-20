@@ -13,7 +13,6 @@
 <script setup>
 import TodoComponent from './components/TodoComponent.vue'
 import { useCounterStore } from './stores/counter.js'
-//import {ref} from 'vue'
 import { storeToRefs } from 'pinia'
 
 const hi = useCounterStore()

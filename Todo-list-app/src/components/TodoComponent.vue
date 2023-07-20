@@ -14,7 +14,7 @@
             </div>
         </div>
         <input @keyup.enter="addTodo" v-model="todoss.texts" class="h-10 rounded-[5px] text-[#4d5066]  px-5 w-full" type="text" placeholder="Create a New Todo..." :class="darkmode ? 'bg-[#25273c]' : 'bg-[#fafafa]'">
-        <TodoList class="grid rounded-[10px] shadow-[0_4px_8px_0_rgba(0,0,0,0.2)_0_6px_20px_0_rgba(0,0,0,0.19)]  w-full h-auto mt-[30px]" :class="darkmode ? 'shadow-[#161722]' : 'shadow-[#cacde8]' " />
+        <TodoList class="grid rounded-t-[10px] shadow-[0_4px_8px_0_rgba(0,0,0,0.2)_0_6px_20px_0_rgba(0,0,0,0.19)]  w-full h-auto mt-[30px]" :class="darkmode ? 'shadow-[#161722]' : 'shadow-[#cacde8]' " />
         
     </div>
 </template>
